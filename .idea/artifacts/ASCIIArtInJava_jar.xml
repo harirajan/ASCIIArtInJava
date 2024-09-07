@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact name="ASCIIArtInJava:jar">
+    <output-path>$USER_HOME$/Desktop</output-path>
+    <root id="root">
+      <element id="archive" name="ASCIIArtInJava.jar">
+        <element id="module-output" name="ASCIIArtInJava" />
+      </element>
+      <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.20.0" />
+      <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.20.0" />
+    </root>
+  </artifact>
+</component>
