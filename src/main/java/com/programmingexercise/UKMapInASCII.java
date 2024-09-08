@@ -59,7 +59,7 @@ public class UKMapInASCII {
         logger.info("converting lat long to xy coordinates");
         Map<Integer, List<Integer>> map;
         map = CoordinateUtils.convertCoordinatesToXY(listOfCoordinates, new HashMap<>(), SCALE_FACTOR, PRECISION_FACTOR);
-        logger.info("converted lat long to xy cordinates");
+        logger.info("converted lat long to xy coordinates");
         logger.info("building the string builder with the map pattern");
         StringBuilder stringBuilder = CoordinateUtils.createStringBuilder(maxLong, minLong, maxLat, minLat, map);
         logger.info("completed the string builder with the map ascii pattern");
