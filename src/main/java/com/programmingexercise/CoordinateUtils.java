@@ -134,6 +134,15 @@ public class CoordinateUtils {
         }
     }
 
+    /**
+     * create string builder with the map pattern
+     * @param maxLong maximum y coordinate  value corresponding to longitude
+     * @param minLong minimum y coordinate value corresponding to longitude
+     * @param maxLat maximum y coordinate  value corresponding to longitude
+     * @param minLat maximum y coordinate  value corresponding to longitude
+     * @param map map containing xy coordinates corresponding to lat long values
+     * @return return the string builder having the pattern of the map
+     */
     public static StringBuilder createStringBuilder(int maxLong, int minLong, int maxLat, int minLat,   Map<Integer, List<Integer>> map){
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = minLat; i <= maxLat; i++) {
