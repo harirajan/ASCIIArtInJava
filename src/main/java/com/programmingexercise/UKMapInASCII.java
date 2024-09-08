@@ -21,8 +21,6 @@ import java.util.*;
  */
 public class UKMapInASCII {
     protected static final Logger logger = LogManager.getLogger();
-
-
     public static int SCALE_FACTOR = 50;
     public static int PRECISION_FACTOR = 100;
 
