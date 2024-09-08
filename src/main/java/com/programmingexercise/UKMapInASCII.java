@@ -57,15 +57,13 @@ public class UKMapInASCII {
             logger.info("read from default config properties file");
         }
         logger.info("reading lat long values from file to list");
-        List<Coordinates> listOfCoordinates = new ArrayList<>();
-        listOfCoordinates = CoordinateUtils.readFileToCoordinates(filePath, listOfCoordinates);
-        logger.info("converting lat long to xy cordinates");
+        List<Coordinates> listOfCoordinates = CoordinateUtils.readFileToCoordinates(filePath);
+        logger.info("converting lat long to xy coordinates");
         Map<Integer, List<Integer>> map;
         map = CoordinateUtils.convertCoordinatesToXY(listOfCoordinates, new HashMap<>(), SCALE_FACTOR, PRECISION_FACTOR);
         logger.info("converted lat long to xy cordinates");
         logger.info("building the string builder with the map pattern");
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder = CoordinateUtils.createStringBuilder(maxLong, minLong, maxLat, minLat, stringBuilder, map);
+        StringBuilder stringBuilder = CoordinateUtils.createStringBuilder(maxLong, minLong, maxLat, minLat, map);
         logger.info("completed the string builder with the map ascii pattern");
 
         logger.info("writing the pattern to  to file");

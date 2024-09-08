@@ -69,10 +69,10 @@ public class CoordinateUtils {
     /**
      *
      * @param filePath path of the file from which the coordinates are to be read
-     * @param listOfCoordinates return values of coordinates will be populated to this list
      * @return listOfCoordinates containing the list of coordinates
      */
-    public static List<Coordinates> readFileToCoordinates(String filePath, List<Coordinates> listOfCoordinates) throws IOException {
+    public static List<Coordinates> readFileToCoordinates(String filePath) throws IOException {
+        List<Coordinates> listOfCoordinates = new ArrayList<Coordinates>();
         FileReader inputputFile = null;
         try {
             inputputFile = new FileReader(filePath);
@@ -134,7 +134,8 @@ public class CoordinateUtils {
         }
     }
 
-    public static StringBuilder createStringBuilder(int maxLong, int minLong, int maxLat, int minLat, StringBuilder stringBuilder,  Map<Integer, List<Integer>> map){
+    public static StringBuilder createStringBuilder(int maxLong, int minLong, int maxLat, int minLat,   Map<Integer, List<Integer>> map){
+        StringBuilder stringBuilder = new StringBuilder();
         for (int i = minLat; i <= maxLat; i++) {
             for (int j = minLong; j <= maxLong; j++) {
                 if (map.containsKey(i)) {
